@@ -1,99 +1,126 @@
 # Data-Analytics---Customer_Behavior_Analysis
 
-Overview
-This project provides an end-to-end data analytics solution designed to uncover key insights into customer spending patterns, demographics, and loyalty. By processing a dataset of 3,900 transactions, the project demonstrates a full data pipeline: from raw data cleaning in Python and advanced querying in PostgreSQL to visual storytelling in Power BI and automated reporting.
+# Customer Shopping Behavior – Data Analytics Project
 
-The primary goal is to help businesses understand which factors (such as discounts, shipping types, or membership status) most significantly drive revenue and customer retention.
+## Overview
 
-Dataset
-The analysis is based on the Customer Shopping Behavior Dataset, which includes:
+This project demonstrates an end-to-end **data analytics workflow** using Python, SQL, and Power BI. It covers data ingestion, exploratory data analysis (EDA), data cleaning, database querying, and business-focused visualization. The goal is to transform raw customer shopping data into clear, actionable insights through analysis, a dashboard, and a presentation.
 
-Total Records: 3,900 rows
+---
 
-Key Features: Customer ID, Age, Gender, Item Purchased, Category, Purchase Amount (USD), Location, Size, Color, Season, Review Rating, Subscription Status, Shipping Type, Discount Applied, and Previous Purchases.
+## Dataset
 
-Target Insights: Identifying high-value segments and optimizing discount strategies.
+* **Source:** Customer shopping behavior dataset (CSV)
+* **Description:** Contains customer demographics, purchase details, and transaction-level attributes used to analyze buying patterns and trends.
+* **Format:** `.csv`
 
-Tools & Technologies
-Language: Python (Pandas, SQLAlchemy, Matplotlib/Seaborn)
+Key columns include customer attributes, purchase frequency, categories, spending metrics, and time-based fields.
 
-Database: PostgreSQL (Relational Data Modeling & Complex Querying)
+---
 
-Visualization: Power BI (Interactive Dashboards)
+## Tools & Technologies
 
-Documentation: Gamma AI (Professional Slide Deck Generation)
+* **Python:** Data loading, EDA, and data cleaning (Pandas, NumPy, Matplotlib/Seaborn)
+* **SQL (PostgreSQL):** Data storage and analytical queries
+* **Power BI:** Interactive dashboard and visual reporting
+* **Gamma:** Presentation (PPT-style report)
+* **Jupyter Notebook:** Analysis and documentation
 
-Environment: Jupyter Notebook, VS Code, pgAdmin 4
+---
 
-Project Steps
-1. Data Preparation & EDA (Python)
-Loaded the raw CSV using Pandas.
+## Project Workflow
 
-Handled missing values (notably in the Review Rating column).
+1. **Data Loading (Python)**
 
-Performed Exploratory Data Analysis (EDA) to identify outliers and understand distribution across age and gender.
+   * Load the raw CSV dataset into a Pandas DataFrame
+   * Perform initial inspections (shape, schema, missing values)
 
-Exported the cleaned data to a PostgreSQL server using SQLAlchemy for structured querying.
+2. **Exploratory Data Analysis (EDA)**
 
-2. SQL Analysis (PostgreSQL)
-Authored complex queries to answer critical business questions, including:
+   * Analyze distributions, trends, and correlations
+   * Identify key metrics such as customer segments, spending patterns, and popular categories
 
-Revenue Segmentation: Comparing total spend by gender and subscription status.
+3. **Data Cleaning & Preparation**
 
-Product Performance: Identifying the top 5 products with the highest average ratings.
+   * Handle missing and inconsistent values
+   * Standardize column formats and data types
+   * Prepare the dataset for database ingestion
 
-Discount Impact: Calculating the percentage of purchases made with discounts per product using conditional aggregation.
+4. **SQL Analysis (PostgreSQL)**
 
-Loyalty Metrics: Segmenting customers into 'New', 'Returning', and 'Loyal' based on previous purchase history.
+   * Load cleaned data into a PostgreSQL database
+   * Write analytical SQL queries to answer business questions
+   * Validate Python insights using SQL-based aggregation
 
-3. Interactive Dashboard (Power BI)
-Developed a multi-view dashboard to visualize KPIs:
+5. **Visualization & Reporting**
 
-Sales Overview: Total Revenue, Average Purchase Amount, and Total Customers.
+   * Build an interactive **Power BI dashboard** for stakeholders
+   * Create a concise presentation in **Gamma** summarizing insights and recommendations
 
-Demographics: Revenue breakdown by Age Group (Young Adult, Middle-aged, Senior).
+---
 
-Category Analysis: Identifying 'Clothing' and 'Accessories' as top revenue drivers.
+## Dashboard
 
-Behavioral Trends: Correlation between subscription status and purchase frequency.
+The Power BI dashboard highlights:
 
-4. Professional Reporting (Gamma & PDF)
-Synthesized findings into a professional report.
+* Customer segmentation and demographics
+* Purchase frequency and spending behavior
+* Category-level performance
+* Key KPIs and trends
 
-Used Gamma AI to generate a recruiter-friendly presentation deck highlighting business recommendations and technical methodology.
+The dashboard is designed to be **interactive, intuitive, and decision-focused**.
 
-Key Results & Insights
-High-Value Segments: "Young Adults" contribute the highest total revenue ($62k+), followed closely by "Middle-aged" customers.
+---
 
-Subscription Impact: While subscribers represent only 27% of the customer base, they show higher consistency in repeat purchases.
+## Results & Key Insights
 
-Category Leaders: Clothing remains the dominant category, while Footwear shows the highest potential for growth through targeted discounts.
+* Identified high-value customer segments and spending patterns
+* Discovered top-performing product categories
+* Highlighted trends that can inform marketing and retention strategies
+* Demonstrated consistency between Python and SQL-based analysis
 
-Shipping Preference: Standard shipping is the most utilized, but Express shipping users tend to have a higher average order value (AOV).
+---
 
-How to Run This Project
-Prerequisites
-Python 3.x
+## How to Run the Project
 
-PostgreSQL Server
+1. **Clone the repository**
 
-Power BI Desktop
+   ```bash
+   git clone <repository-url>
+   cd <project-folder>
+   ```
 
-Setup
-Database: * Create a database named customer_behavior in PostgreSQL.
+2. **Set up Python environment**
 
-Run the schema/table creation steps found in Customer_Behavior_Analysis.sql.
+   ```bash
+   pip install pandas numpy matplotlib seaborn sqlalchemy psycopg2
+   ```
 
-Python Environment:
+3. **Run analysis**
 
-Install dependencies: pip install pandas sqlalchemy psycopg2-binary.
+   * Open the Jupyter Notebook
+   * Execute cells in order for EDA and data cleaning
 
-Open Customer_Shopping_Behavior_Analysis.ipynb and update the database credentials (username/password) to match your local setup.
+4. **PostgreSQL Setup**
 
-Run all cells to clean data and upload it to SQL.
+   * Create a PostgreSQL database
+   * Load the cleaned dataset into tables
+   * Run the provided SQL queries
 
-Visualization:
+5. **Dashboard & Presentation**
 
-Open customer_behavior_dashboard.pbix in Power BI.
+   * Open the Power BI `.pbix` file to explore the dashboard
+   * Review the Gamma presentation for a summarized business report
 
-(Optional) Reconnect the data source to your local PostgreSQL instance.
+---
+
+## Notes
+
+* This project is structured to reflect **real-world analytics workflows**
+* Clear separation between data processing, querying, and reporting
+* Suitable as a **portfolio project** for data analyst and data science roles
+
+---
+
+**Author:** Daivik Patel
+**Focus Areas:** Data Analytics | SQL | Python | Power BI
