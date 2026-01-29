@@ -1,5 +1,3 @@
-# Data-Analytics---Customer_Behavior_Analysis
-
 # Customer Shopping Behavior – Data Analytics Project
 
 ## Overview
